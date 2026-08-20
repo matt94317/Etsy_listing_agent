@@ -1,0 +1,23 @@
+{
+  "name": "etsy-auto-listing",
+  "version": "1.0.0",
+  "description": "Drafts an Etsy listing each day from a Google Sheet row's raw facts and its linked Drive photo folder.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "auth": "node scripts/get-etsy-token.js",
+    "auth-google": "node scripts/get-google-token.js",
+    "find-ids": "node scripts/find-shop-ids.js",
+    "publish": "node scripts/publish-listing.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "googleapis": "^140.0.0",
+    "open": "^10.1.0",
+    "undici": "^6.19.8"
+  }
+}
